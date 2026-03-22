@@ -1,0 +1,101 @@
+.dark {
+	--bg-color: #222;
+	--accent-color: #eb7bc0;
+}
+
+.light {
+	--bg-color: #F8E7DA;
+	--text-color: #1a1a1a;
+
+	--accent-color: #e655ae;
+	--accent-alternate: #69535C;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100%;
+	min-height: 100vh;
+
+	margin: 0;
+	padding: 0 10rem;
+
+	background-color: var(--bg-color);
+	color: var(--text-color);
+
+	font-family: "Inter";
+}
+
+.container {
+	width: 100%;
+
+	margin-top: 5rem;
+}
+
+.page-title {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+}
+
+.title {
+	font-family: "Titillium Web";
+	font-weight: 700;
+}
+
+.accent {
+	color: var(--accent-color);
+}
+
+.main-search {
+	width: 100%;
+
+	outline: none;
+	border: none;
+	padding: 5px 0.8rem;
+	border-radius: 5px;
+
+	font-size: 1.5rem;
+	color: var(--accent-alternate);
+}
+
+.main-search::placeholder {
+	text-align: center;
+}
+
+.course-list {
+	display: flex;
+	flex-direction: column;
+
+	gap: 10px;
+}
+
+.course-list .course {
+	background: white;
+	border-radius: 10px;
+	padding: 10px;
+
+	text-decoration: none;
+	color: var(--text-color);
+
+	transition: outline 200ms;
+	outline: 1px solid transparent;
+}
+
+.course-list .course:hover {
+	outline: 1px solid var(--accent-color);
+}
+
+.course-list .course .rank {
+	color: var(--accent-color);
+	margin-right: 0.5rem;
+	font-weight: bold;
+}
+
+.course-list .course .rating {
+	display: flex;
+	align-items: center;
+	float: right;
+}
