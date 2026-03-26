@@ -42,20 +42,49 @@
 
 		<div class="quick-links container-section">
 			<h3>Quick Links</h3>
+			<ul class="quick-links-list">
+				<li>
+					<a href="https://qp.metakgp.org?q={course.name}"
+						>Question Papers (IQPS)</a
+					>
+				</li>
+				<li>
+					<a href="https://notes.metakgp.org?q={course.name}"
+						>Notes (CFMN)</a
+					>
+				</li>
+				<li>
+					<a href="https://notes.metakgp.org?q={course.name}"
+						>Grades (Kronos)</a
+					>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>
 <div class="container feedback">
 	<h2>Student Feedback</h2>
+
+	<div class="feedback-comments">
+		<div class="comment">Good course by Mr. X</div>
+	</div>
 </div>
 
 <style>
 	.course-header {
+		padding: 0.3rem 1rem 0.4rem 1rem;
+
 		.course-info {
 			gap: 1rem;
 
 			.rating {
-				width: 70%;
+				width: 50%;
+			}
+
+			.quick-links {
+				.quick-links-list {
+					margin: 0;
+				}
 			}
 		}
 
@@ -81,6 +110,15 @@
 					background-color: var(--accent-alternate);
 				}
 			}
+		}
+	}
+
+	.feedback-comments {
+		.comment {
+			width: fit-content;
+			padding: 1rem;
+			border-radius: 5px;
+			background-color: var(--surface-1);
 		}
 	}
 </style>

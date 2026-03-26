@@ -1,4 +1,7 @@
 <script>
+	import Star from "@lucide/svelte/icons/star"
+	import StarHalf from "@lucide/svelte/icons/star-half"
+
 	let top_courses = $state([
 		{ id: 43, name: "Information Security", code: "CSXXXXX", rating: 4.8 },
 		{
@@ -23,7 +26,8 @@
 					>{course.name} ({course.code})</span
 				>
 				<div class="rating">
-					{"⭐️".repeat(Math.round(course.rating))}
+					{#each Array(Math.floor(course.rating))} <Star fill="#fdd835" strokeWidth="0" /> {/each}
+					{#if (course.rating - Math.floor(course.rating) >= 0.5)} <StarHalf fill="#fdd835" strokeWidth="0" /> {/if}
 					{course.rating}
 				</div>
 			</a>
@@ -78,10 +82,10 @@
 		border-radius: 5px;
 
 		font-size: 1.5rem;
-	}
 
-	.main-search::placeholder {
-		text-align: center;
+		&::placeholder {
+			text-align: center;
+		}
 	}
 
 	.course-list {
